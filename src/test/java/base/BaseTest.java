@@ -9,7 +9,7 @@ import pages.MainPage;
 
 // Base class
 public class BaseTest {
-    public final String url = "https://demoqa.com/";
+    private final String url = "https://demoqa.com/";
 
     protected static Playwright playwright;
     protected static Browser browser;
@@ -42,6 +42,7 @@ public class BaseTest {
 
     @AfterEach
     void tearDown(){
+        if (page != null) page.close();
         if (browserContext != null) browserContext.close();
     }
 }

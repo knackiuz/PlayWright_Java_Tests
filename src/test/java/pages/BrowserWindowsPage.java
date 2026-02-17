@@ -6,6 +6,7 @@ import com.microsoft.playwright.Page;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+// POM class: 'Browser Windows' page
 public class BrowserWindowsPage {
     private final Page page;
 

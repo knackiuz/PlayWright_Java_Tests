@@ -9,13 +9,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+// POM class: 'Alerts' page
 public class AlertsPage {
     private final Page page;
 
     protected final Locator alertButton;
     protected final Locator timerAlertButton;
-    protected final Locator promtButton;
+    protected final Locator promptButton;
     protected final Locator promptResult;
 
     private final Logger logger;
@@ -24,7 +24,7 @@ public class AlertsPage {
         this.page = page;
         this.alertButton = page.locator("#alertButton");
         this.timerAlertButton = page.locator("#timerAlertButton");
-        this.promtButton = page.locator("#promtButton");
+        this.promptButton = page.locator("#promtButton");
         this.promptResult = page.locator("#promptResult");
 
         this.logger = Logger.getLogger(AlertsPage.class);
@@ -78,7 +78,7 @@ public class AlertsPage {
             isProcessed.set(true);
         });
 
-        promtButton.click();
+        promptButton.click();
 
         if (!isProcessed.get() && attempts < 100) {
             page.waitForTimeout(100);

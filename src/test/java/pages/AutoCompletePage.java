@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 
 import java.util.List;
 
-
+// POM class: 'Autocomplete' page
 public class AutoCompletePage {
     private final Page page;
     private final Logger logger;

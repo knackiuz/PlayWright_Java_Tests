@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 
 import java.util.HashMap;
 
-// POM class: Text Box page
+// POM class: 'Text Box' page
 public class TextBoxPage {
     private final Page page;
 

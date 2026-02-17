@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-// POM class: Check Box page
+// POM class: 'Check Box' page
 public class CheckBoxPage {
     private final Page page;
 

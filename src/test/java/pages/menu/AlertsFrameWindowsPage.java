@@ -1,9 +1,12 @@
-package pages;
+package pages.menu;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import pages.AlertsPage;
+import pages.BrowserWindowsPage;
+import pages.FramesPage;
 
-// POM class: 'Alerts, Frame & Windows' page
+// POM class: 'Alerts, Frame & Windows' page in right menu
 public class AlertsFrameWindowsPage {
     private final Page page;
 

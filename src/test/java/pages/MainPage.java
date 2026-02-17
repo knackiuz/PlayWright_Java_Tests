@@ -2,16 +2,21 @@ package pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import pages.menu.AlertsFrameWindowsPage;
+import pages.menu.ElementsPage;
+import pages.menu.InteractionsPage;
+import pages.menu.WidgetsPage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-// POM class: Main page
+// POM class: 'Main' page
 public class MainPage {
     private final Page page;
     private final Locator homeBanner;
     private final Locator elementsCard;
     private final Locator alertsFrameWindowsMCard;
     private final Locator widgetsCard;
+    private final Locator interactionsCard;
 
     public MainPage(Page page){
         this.page = page;
@@ -19,6 +24,7 @@ public class MainPage {
         this.elementsCard = page.locator(".card").filter(new Locator.FilterOptions().setHasText("Elements"));
         this.alertsFrameWindowsMCard = page.getByText("Alerts, Frame & Windows");
         this.widgetsCard = page.getByText("Widgets");
+        this.interactionsCard = page.getByText("Interactions");
     }
 
     // Navigate
@@ -48,5 +54,11 @@ public class MainPage {
     public WidgetsPage clickWidgetsCard(){
         widgetsCard.click();
         return new WidgetsPage(page);
+    }
+
+    // Go to Interactions
+    public InteractionsPage clickInteractionCard(){
+        interactionsCard.click();
+        return new InteractionsPage(page);
     }
 }

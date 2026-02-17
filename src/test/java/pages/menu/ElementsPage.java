@@ -1,9 +1,12 @@
-package pages;
+package pages.menu;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import pages.CheckBoxPage;
+import pages.RadioButtonPage;
+import pages.TextBoxPage;
 
-// POM class: Elements page
+// POM class: 'Elements' page in right menu
 public class ElementsPage {
     private final Page page;
     private final Locator textBoxMenu;

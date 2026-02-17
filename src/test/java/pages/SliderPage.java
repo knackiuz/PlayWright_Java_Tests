@@ -6,7 +6,7 @@ import org.apache.log4j.Logger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+// POM class: 'Slider' page
 public class SliderPage {
     private final Page page;
     private final Logger logger;

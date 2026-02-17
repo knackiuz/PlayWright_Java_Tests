@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-// POM class: Radio Button page
+// POM class: 'Radio Button' page
 public class RadioButtonPage {
     private final Page page;
 
