@@ -22,7 +22,13 @@ public class BaseTest {
     @BeforeAll
     static void launchBrowser(){
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(50));
+        // Cannot be used in GitHub
+        // browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(50));
+        String headlessProperty = System.getProperty("playwright.headless", "true");
+        boolean isHeadless = Boolean.parseBoolean(headlessProperty);
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
+                .setHeadless(isHeadless) // Value from yml file
+                .setSlowMo(50));
     }
 
     @AfterAll
