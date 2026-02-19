@@ -12,6 +12,8 @@ This project is a comprehensive automated testing framework for the [DemoQA](htt
 * **JUnit 5** — Testing framework for test execution and organization.
 * **Log4j** — Logging utility for better debugging and traceability.
 * **Page Object Model (POM)** — Architectural pattern to separate test logic from page locators.
+* **Allure Report** — Advanced reporting tool with history and trend tracking.
+* **GitHub Actions** — CI/CD integration for automated test execution on every push.
 
 ---
 
@@ -36,3 +38,22 @@ Automated scenarios are implemented for the following sections:
 
 ## 🛠 Implementation Details
 **Fluent Interface:** Methods are designed to be chainable, resulting in highly readable and concise test code.
+
+---
+
+## ⛓ CI/CD & Parallel Execution
+The project is fully integrated with **GitHub Actions** to ensure code quality on every push.
+
+* **Parallel Execution:** We use a **GitHub Matrix Strategy** to run test groups (`Elements`, `Widgets`, `Alerts`, etc.) simultaneously across multiple runner instances. This significantly reduces total execution time.
+* **Headless Mode:** Tests automatically run in *headless* mode on CI, while maintaining the ability to run in *headed* mode locally for debugging.
+
+---
+
+## 📊 Reporting
+The framework generates detailed **Allure Reports** after every test run.
+
+* **GitHub Pages Integration:** Reports are automatically deployed and hosted on GitHub Pages.
+* **Rich Attachments:** Failed tests include screenshots and detailed error logs for faster debugging.
+* **Historical Trends:** The report tracks execution history, allowing you to see the stability of tests over time.
+
+> **View Latest Report:** [🔗 Click here to see the Allure Report](https://knackiuz.github.io/PlayWright_Java_Tests/7/index.html)
