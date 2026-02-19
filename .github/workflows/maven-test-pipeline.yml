@@ -32,7 +32,7 @@ jobs:
       - name: Run Tests
         # Ensure your pom.xml is configured for JUnit 5 tags
         run: mvn test -Dgroups="${{ matrix.test-group }}" -Dplaywright.headless=true
-        continue-on-error: true
+        #continue-on-error: true
 
       - name: Upload Allure Results
         if: always()
