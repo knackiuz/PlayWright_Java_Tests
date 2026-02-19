@@ -67,9 +67,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.version}</version>
                 <configuration>
-                    <argLine>
+                    <!-- <argLine>
                         -javaagent:"${org.aspectj:aspectjweaver:jar}"
-                    </argLine>
+                    </argLine> -->
                     <systemPropertyVariables>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                     </systemPropertyVariables>

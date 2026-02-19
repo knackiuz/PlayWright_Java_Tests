@@ -21,6 +21,6 @@ public class WidgetsSliderTest extends BaseTest {
                 .setSliderValue(sliderTargetValue)
                 .checkSliderValue(sliderTargetValue);
 
-        page.pause();
+        //page.pause();
     }
 }
