@@ -2,12 +2,14 @@ package tests;
 
 import base.BaseTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("elements")
 public class ElementsTextBoxTest extends BaseTest {
     @Test
     @DisplayName("Test for Edit fields: enter data, confirm and check result")

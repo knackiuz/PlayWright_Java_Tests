@@ -2,8 +2,10 @@ package tests;
 
 import base.BaseTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("elements")
 public class ElementsCheckBoxTest extends BaseTest {
     @Test
     @DisplayName("Test for check box: select, expand and collapse all")

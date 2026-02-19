@@ -3,10 +3,12 @@ package tests;
 import base.BaseTest;
 import com.microsoft.playwright.Page;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
+@Tag("alerts_frame_windows")
 public class AlertsFrameWindowsBrowserWindowsTest extends BaseTest {
     @Test
     @DisplayName("Test for Modal Dialogs: check new tab")

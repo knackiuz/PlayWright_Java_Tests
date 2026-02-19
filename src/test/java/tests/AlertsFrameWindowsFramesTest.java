@@ -2,8 +2,10 @@ package tests;
 
 import base.BaseTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("alerts_frame_windows")
 public class AlertsFrameWindowsFramesTest extends BaseTest {
     @Test
     @DisplayName("Test for Frames: check text in a frame")
