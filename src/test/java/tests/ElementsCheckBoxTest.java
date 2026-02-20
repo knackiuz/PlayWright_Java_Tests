@@ -15,11 +15,12 @@ public class ElementsCheckBoxTest extends BaseTest {
                 .verifyMainPageIsLoaded()               // Verify that page is loaded
                 .clickOnElementsCard()                  // Click on Card 'Elements'
                 .selectCheckBoxMenu()                   // Select menu 'Check Box'
-                .clickExpandAllButton()                 // Click 'Expand All'
-                .verifyDesktopCheckBoxIsVisible()       // Verify that check box 'Desktop' is visible
+                .verifyDesktopCheckBoxIsHidden()        // Verify that check box 'Desktop' is hidden
+                .clickExpandCollapseHomeButton()        // Click 'Expand Home'
                 .clickHomeCheckBox()                    // Click check box 'Home'
                 .verifyHomeIsSelected()                 // Verify that check box 'Home' is selected
-                .clickCollapseAllButton()               // Click 'Collapse All'
+                .verifyDesktopCheckBoxIsVisible()       // Verify that check box 'Desktop' is visible
+                .clickExpandCollapseHomeButton()        // Click 'Collapse Home'
                 .verifyDesktopCheckBoxIsHidden();       // Verify that check box 'Desktop' is hidden
 
         //page.pause();
