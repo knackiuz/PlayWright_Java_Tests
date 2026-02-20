@@ -2,6 +2,7 @@ package pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.LoadState;
 import org.apache.log4j.Logger;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
@@ -30,6 +31,9 @@ public class InteractionsDroppablePage {
     }
 
     public InteractionsDroppablePage dragAndDropElementMouse(){
+        logger.info("Wait for ads");
+        page.waitForTimeout(3000);
+
         logger.info("Performing drag and drop action using mouse");
         draggable.hover();
         page.mouse().down();
