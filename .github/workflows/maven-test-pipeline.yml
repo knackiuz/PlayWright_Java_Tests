@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: mcr.microsoft.com/playwright/java:v1.49.0-noble
+      image: mcr.microsoft.com/playwright/java:v1.58.0-noble
 
     strategy:
       fail-fast: false
@@ -30,8 +30,8 @@ jobs:
           cache: maven
 
       # Install Playwright browsers with system dependencies
-      - name: Install Playwright Browsers
-        run: mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
+      #- name: Install Playwright Browsers
+      #  run: mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
 
       - name: Run Tests
         # Ensure your pom.xml is configured for JUnit 5 tags
