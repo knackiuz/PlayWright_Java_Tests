@@ -25,6 +25,7 @@ public class InteractionsDroppablePage {
 
     public InteractionsDroppablePage dragAndDropElement(){
         logger.info("Performing drag and drop action");
+        page.waitForTimeout(3000);
         draggable.dragTo(droppable, new Locator.DragToOptions().setForce(true).setSteps(10));
 
         return this;
