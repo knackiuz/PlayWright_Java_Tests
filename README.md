@@ -57,3 +57,17 @@ The framework generates detailed **Allure Reports** after every test run.
 * **Historical Trends:** The report tracks execution history, allowing you to see the stability of tests over time.
 
 > **View Latest Report:** [🔗 Click here to see the Allure Report](https://knackiuz.github.io/PlayWright_Java_Tests/7/index.html)
+
+## 🐳 Running Tests with Docker
+
+This project is fully containerized, allowing for consistent test execution across different environments.
+
+### Prerequisites
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running.
+* Docker Compose (included with Docker Desktop).
+
+### 🚀 Parallel Execution (Recommended)
+To run tests in 4 parallel containers (grouped by logical modules), use the orchestrated Docker Compose configuration:
+
+```bash
+docker-compose -f docker_groups_run.yml up

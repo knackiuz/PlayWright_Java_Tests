@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  test-group-1:
+    image: mcr.microsoft.com/playwright/java:v1.58.0-noble
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: mvn test -Dgroups=alerts_frame_windows -Dplaywright.headless=true
+
+  test-group-2:
+    image: mcr.microsoft.com/playwright/java:v1.58.0-noble
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: mvn test -Dgroups=interactions -Dplaywright.headless=true
+
+  test-group-3:
+    image: mcr.microsoft.com/playwright/java:v1.58.0-noble
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: mvn test -Dgroups=elements -Dplaywright.headless=true
+
+  test-group-4:
+    image: mcr.microsoft.com/playwright/java:v1.58.0-noble
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: mvn test -Dgroups=widgets -Dplaywright.headless=true
