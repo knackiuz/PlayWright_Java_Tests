@@ -71,3 +71,11 @@ To run tests in 4 parallel containers (grouped by logical modules), use the orch
 
 ```bash
 docker-compose -f docker_groups_run.yml up
+
+```
+### 🏗 High-Performance Parallel Execution (Bash Script)
+Spawns 4 independent Docker containers running specific test groups (elements, widgets, etc.) in parallel.
+
+```Git Bash
+./run_groups_parallel.sh
+```
