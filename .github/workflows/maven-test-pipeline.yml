@@ -1,6 +1,8 @@
 name: Java Maven Tests CI
 
 on:
+  #pull_request:
+  #workflow_dispatch:
   push:
     branches: [ master ]
 
