@@ -32,7 +32,7 @@ public class ResizablePage {
         page.mouse().move(box.x + box.width / 2, box.y + box.height / 2);
         page.mouse().down();
         page.mouse().move(box.x + width, box.y + height);
-        page.mouse().up();;
+        page.mouse().up();
 
         return this;
     }
